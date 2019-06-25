@@ -10,8 +10,13 @@
   <ion-button (click)="openCam()">Open Camera</ion-button>
   <ion-button (click)="scan()">scan</ion-button>
   <!-- <img src="{{ buf }}" /> -->
-  <p>{{message}}</p>
-  <p>Device - {{device}}</p>
-  <p>{{error}}</p>
+  <p>{{ message }}</p>
+  <p>Device - {{ device }}</p>
+  <p>{{ error }}</p>
+  <ul>
+    <li *ngFor="let item of devices; let currentElementIndex = index">
+      <ion-button (click)="connect(item.id)">{{ item.id }}</ion-button>
+    </li>
+  </ul>
   <img [src]="sanitized.bypassSecurityTrustUrl(image)" />
 </ion-content>
