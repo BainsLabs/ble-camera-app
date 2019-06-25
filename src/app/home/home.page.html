@@ -8,6 +8,10 @@
 
 <ion-content>
   <ion-button (click)="openCam()">Open Camera</ion-button>
-  <!-- <img src="{{ image }}" /> -->
+  <ion-button (click)="scan()">scan</ion-button>
+  <!-- <img src="{{ buf }}" /> -->
+  <p>{{message}}</p>
+  <p>Device - {{device}}</p>
+  <p>{{error}}</p>
   <img [src]="sanitized.bypassSecurityTrustUrl(image)" />
 </ion-content>
