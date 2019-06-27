@@ -49,9 +49,9 @@ export class HomePage {
   upload(image, imageName) {
     return new Promise((resolve, reject) => {
       const S3 = new aws.S3({
-        accessKeyId: 'AKIAXHUAJF5RUCEI34FS',
-        secretAccessKey: '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',
-        region: 'us-east-2'
+        accessKeyId: '',
+        secretAccessKey: '',
+        region: ''
       });
       let buf = new Buffer(image, 'base64');
 
